@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مدونة - واجهة احترافية</title>
+    <meta name="description" content="واجهة مدونة نظيفة وعصرية على طريقة Apple - HTML / CSS / JS" />
+    <meta property="og:title" content="مدونتي - أفكار تستحق القراءة">
+    <meta property="og:description" content="مدونة مختارة بعناية لمقالات عالية الجودة في تطوير الذات، تقنية، سفر، وأكثر.">
+    <meta property="og:image" content="assets/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "مدونتي - أفكار تستحق القراءة",
+            "description": "مدونة مختارة بعناية لمقالات عالية الجودة في تطوير الذات، تقنية، سفر، وأكثر.",
+            "url": "https://yourblog.com",
+            "publisher": {
+                "@type": "Organization",
+                "name": "مدونتي",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://yourblog.com/assets/img/logo.jpg"
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --card: #f7f7f8;
+            --muted: #6b7280;
+            --accent: #0a84ff;
+            --text: #0b1220;
+            --glass: rgba(255,255,255,0.6);
+            --radius: 14px;
+            --shadow: 0 6px 24px rgba(11,18,32,0.08);
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        [data-theme="dark"] {
+            --bg: #0b0c0f;
+            --card: #0f1216;
+            --muted: #9aa3b2;
+            --accent: #3ea6ff;
+            --text: #e6eef8;
+            --glass: rgba(10,10,12,0.4);
+            --shadow: 0 8px 30px rgba(2,6,12,0.6);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0;
+        }
+        html, body { 
+            height: 100%;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        a { 
+            color: inherit; 
+            text-decoration: none;
+        }
+        img { 
+            max-width: 100%; 
+            display: block;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: auto; 
+            padding: 28px;
+        }
+
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+        [data-theme="dark"] header {
+            background: var(--glass);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav { 
+            display: flex; 
+            align-items: center; 
+            gap: 18px; 
+            padding: 12px 28px;
+        }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+        }
+        .logo .badge {
+            width: 40px; 
+            height: 40px; 
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #6cc8ff);
+            box-shadow: var(--shadow);
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden;
+        }
+        .logo img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+        .logo .text div:first-child { 
+            font-weight: 700;
+        }
+        .logo .text div:last-child { 
+            font-size: 12px; 
+            color: var(--muted);
+        }
+
+        .nav-links { 
+            display: flex; 
+            gap: 20px; 
+            align-items: center; 
+            margin-inline-start: auto;
+        }
+        .nav-links a { 
+            padding: 8px 10px; 
+            border-radius: 10px; 
+            font-weight: 600; 
+            color: var(--muted); 
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover { 
+            background: var(--accent); 
+            color: white;
+        }
+
+        .nav-actions { 
+            display: flex; 
+            gap: 10px; 
+            align-items: center;
+        }
+        .icon-btn {
+            background: transparent; 
+            border: 1px solid rgba(0,0,0,0.06);
+            padding: 8px; 
+            border-radius: 10px; 
+            display: inline-flex;
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] .icon-btn { 
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .icon-btn:hover { 
+            background: var(--accent); 
+            color: white;
+        }
+
+        .search input {
+            width: 280px; 
+            padding: 10px 14px; 
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.06); 
+            background: var(--card);
+            outline: none; 
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] .search input { 
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .search input:focus { 
+            border-color: var(--accent);
+        }
+
+        .hero { 
+            display: grid; 
+            grid-template-columns: 1fr 420px; 
+            gap: 28px; 
+            padding: 60px 0; 
+            align-items: center;
+        }
+        .hero-card {
+            padding: 40px; 
+            border-radius: 20px;
+            background: linear-gradient(180deg, var(--card), transparent);
+            box-shadow: var(--shadow); 
+            transition: all 0.3s ease;
+        }
+        .hero h1 { 
+            font-size: 32px; 
+            margin-bottom: 12px;
+        }
+        .hero p { 
+            color: var(--muted); 
+            margin-bottom: 18px;
+        }
+        .cta {
+            display: inline-flex; 
+            gap: 10px; 
+            align-items: center;
+            padding: 12px 18px; 
+            border-radius: 12px; 
+            background: var(--accent);
+            color: white; 
+            font-weight: 600; 
+            transition: background 0.3s ease;
+        }
+        .cta:hover { 
+            background: #007aff;
+        }
+        .pill {
+            display: inline-block; 
+            padding: 8px 12px; 
+            border-radius: 999px;
+            background: var(--glass); 
+            font-weight: 600; 
+            color: var(--muted);
+        }
+
+        .hero-side { 
+            border-radius: 18px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow);
+        }
+        .hero-side img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        section { 
+            padding: 44px 0;
+        }
+        h2.section-title { 
+            font-size: 20px; 
+            margin-bottom: 18px;
+        }
+        .posts-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px;
+        }
+        .post {
+            background: var(--card); 
+            border-radius: var(--radius);
+            overflow: hidden; 
+            box-shadow: var(--shadow);
+            transition: transform .28s, box-shadow .28s;
+            position: relative;
+        }
+        .post a { /* تأكد من أن الرابط يغطي كامل البطاقة */
+            display: block;
+        }
+        .post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .post:hover::before {
+            opacity: 0.1;
+        }
+        .post:hover { 
+            transform: translateY(-6px);
+        }
+        .post .thumb { 
+            height: 180px; 
+            overflow: hidden;
+        }
+        .post .thumb img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform .4s ease;
+        }
+        .post:hover .thumb img { 
+            transform: scale(1.05);
+        }
+        .post .meta { 
+            padding: 16px;
+        }
+        .post .meta .cat { 
+            font-size: 12px; 
+            color: var(--accent); 
+            font-weight: 700; 
+            margin-bottom: 8px;
+        }
+        .post .meta h3 { 
+            margin: 0 0 8px; 
+            transition: color .3s ease;
+        }
+        .post:hover .meta h3 { 
+            color: var(--accent);
+        }
+        .post .meta p { 
+            color: var(--muted); 
+            margin: 0;
+        }
+
+        .cats { 
+            display: flex; 
+            gap: 12px; 
+            flex-wrap: wrap;
+        }
+        .cat-pill {
+            padding: 8px 12px; 
+            border-radius: 999px;
+            background: rgba(10,10,10,0.05); 
+            font-weight: 600;
+            cursor: pointer; 
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] .cat-pill { 
+            background: rgba(255,255,255,0.05);
+        }
+        .cat-pill:hover, .cat-pill.active { 
+            background: var(--accent); 
+            color: white;
+        }
+
+        #noResults { 
+            display: none; 
+            text-align: center; 
+            color: var(--muted); 
+            margin-top: 20px; 
+            font-weight: 600;
+        }
+
+    
+        .newsletter {
+            padding: 40px; 
+            border-radius: 20px;
+            background: var(--card); 
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .newsletter h2 { 
+            font-size: 24px; 
+            margin-bottom: 16px;
+        }
+        .newsletter form { 
+            display: flex; 
+            gap: 12px; 
+            justify-content: center; 
+            flex-wrap: wrap;
+        }
+        .newsletter input[type="email"] {
+            padding: 12px 16px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0,0,0,0.06);
+            background: var(--bg); 
+            width: 280px; 
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        [data-theme="dark"] .newsletter input[type="email"] { 
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .newsletter input[type="email"]:focus { 
+            border-color: var(--accent);
+        }
+        .newsletter button {
+            padding: 12px 24px; 
+            border-radius: 12px; 
+            background: var(--accent);
+            color: white; 
+            font-weight: 600; 
+            border: none; 
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .newsletter button:hover { 
+            background: #007aff;
+        }
+
+        .about {
+            padding: 40px; 
+            border-radius: 20px;
+            background: var(--card); 
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .about h2 { 
+            font-size: 24px; 
+            margin-bottom: 16px;
+        }
+        .about p { 
+            color: var(--muted); 
+            margin-bottom: 18px;
+        }
+
+    
+        .partners {
+            padding: 40px; 
+            border-radius: 20px;
+            background: var(--card); 
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .partners h2 { 
+            font-size: 24px; 
+            margin-bottom: 16px;
+        }
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .partner-logo {
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--bg);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        .partner-logo:hover { 
+            transform: scale(1.05);
+        }
+        .partner-logo img {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        /* Contact Form Styles */
+        .contact {
+            padding: 40px; 
+            border-radius: 20px;
+            background: var(--card); 
+            box-shadow: var(--shadow);
+        }
+        .contact h2 { 
+            font-size: 24px; 
+            margin-bottom: 16px; 
+            text-align: center;
+        }
+        .contact form { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+            max-width: 600px; 
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            padding: 12px 16px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0,0,0,0.06);
+            background: var(--bg); 
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        [data-theme="dark"] .contact input, 
+        [data-theme="dark"] .contact textarea { 
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .contact input:focus, .contact textarea:focus { 
+            border-color: var(--accent);
+        }
+        .contact button {
+            padding: 12px 24px; 
+            border-radius: 12px; 
+            background: var(--accent);
+            color: white; 
+            font-weight: 600; 
+            border: none; 
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact button:hover { 
+            background: #007aff;
+        }
+
+        
+        .install-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            font-family: inherit;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .install-btn:hover {
+            background: #007aff;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Focus styles for accessibility */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .partners-grid { 
+                display: none;
+            }
+            .nav {
+                padding: 12px 16px;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 40px 0;
+            }
+            .hero-card {
+                padding: 24px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .partners-grid { 
+                display: grid;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .search input { 
+                display: none;
+            }
+            .nav-links {
+                display: none; 
+                position: absolute; 
+                top: 60px; 
+                right: 28px;
+                background: var(--bg); 
+                width: 100%; 
+                max-width: 200px;
+                flex-direction: column; 
+                padding: 12px; 
+                box-shadow: var(--shadow);
+                border-radius: 10px; 
+                z-index: 150;
+            }
+            .nav-links.show { 
+                display: flex;
+            }
+            #menuBtn { 
+                z-index: 200; 
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+    <header>
+        <div class="nav container">
+            <div class="logo">
+                <div class="badge">
+                    <img src="assets/img/logo.jpg" alt="شعار مدونتي">
+                </div>
+                <div class="text">
+                    <div>مدونتي</div>
+                    <div>أفكار تستحق القراءة</div>
+                </div>
+            </div>
+
+            <nav class="nav-links" aria-label="روابط الموقع">
+                <a href="#home">الرئيسية</a>
+                <a href="#posts">المقالات</a>
+                <a href="#categories">التصنيفات</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">تواصل</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search" role="search">
+                    <input id="searchInput" placeholder="ابحث في عنوان المقالة أو التصنيف..." aria-label="ابحث في المقالات">
+                </div>
+                <button class="icon-btn" id="themeToggle" title="تبديل الوضع" aria-label="تبديل بين الوضع الفاتح والداكن">🌙</button>
+                <button class="icon-btn" id="menuBtn" aria-label="قائمة التنقل" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="home">
+        <section class="hero">
+            <div class="hero-card">
+                <h1>نكتب لنلهم. نشارك أفكارًا تصنع الفرق.</h1>
+                <p>مدونة مختارة بعناية لمقالات عالية الجودة في مجالات متعددة: تطوير الذات، تقنية، سفر، مطبخ والمزيد.</p>
+                <div style="margin-top:18px;display:flex;gap:12px;">
+                    <a class="cta" href="#posts">استكشف المقالات</a>
+                    <a class="pill" href="#newsletter">اشترك في النشرة</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="posts">
+            <h2 class="section-title">أحدث المقالات</h2>
+            <div class="posts-grid" id="postsGrid">
+                
+                <article class="post" data-title="كيف تزيد إنتاجيتك بخطوات بسيطة" data-cat="تطوير الذات">
+                    <a href="posts/كيف-تزيد-انتاجيتك-بخطوات-بسيطه.html">
+                        <div class="thumb"><img src="assets/img/1751444658009.png" alt="صورة توضيحية لتطوير الذات"></div>
+                        <div class="meta">
+                            <div class="cat">تطوير الذات</div>
+                            <h3>كيف تزيد إنتاجيتك بخطوات بسيطة</h3>
+                            <p>خطوات عملية يمكنك تطبيقها اليوم لزيادة تركيزك وتقليل التسويف.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post" data-title="أفضل الأدوات للتدوين في 2025" data-cat="تقنية">
+                    <a href="posts/أفضل-الأدوات-للتدوين-في-2025.html">
+                        <div class="thumb">
+                            <img src="assets/img/images (1).jpeg" alt="صورة أدوات التدوين">
+                        </div>
+                        <div class="meta">
+                            <div class="cat">تقنية</div>
+                            <h3>أفضل الأدوات للتدوين في 2025</h3>
+                            <p>جولة في الأدوات التي تسهل كتابة ونشر المحتوى بسرعة واحتراف.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post" data-title="مراجعة مسلسل قصة عصر" data-cat="ترفيه">
+                    <a href="posts/مراجعة-مسلسل-قصة-عصر.html">
+                        <div class="thumb"><img src="assets/img/sS6Uo9WdMBLtSo8zgkgpZYH4f7QfEpFqZa9cOSQT.jpg" alt="صورة مسلسل قصة عصر"></div>
+                        <div class="meta">
+                            <div class="cat">ترفيه</div>
+                            <h3>مراجعة مسلسل: قصة عصر</h3>
+                            <p>تحليل سريع للحلقات الأولى ولماذا يستحق المشاهدة.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post" data-title="وصفات سهلة لعشاء يومي" data-cat="طبخ">
+                    <a href="posts/وصفات-سهلة-لعشاء-يومي.html">
+                        <div class="thumb"><img src="assets/img/طبخ%20.webp" alt="صورة وصفات طبخ"></div>
+                        <div class="meta">
+                            <div class="cat">طبخ</div>
+                            <h3>وصفات سهلة لعشاء يومي</h3>
+                            <p>أكلات سريعة وصحية في أقل من 30 دقيقة.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post" data-title="كيف تخطط لرحلة اقتصادية" data-cat="سفر">
+                    <a href="posts/كيف-تخطط-لرحلة-اقتصادية.html">
+                        <div class="thumb"><img src="assets/img/images (3).jpeg" alt="صورة تخطيط السفر"></div>
+                        <div class="meta">
+                            <div class="cat">سفر</div>
+                            <h3>كيف تخطط لرحلة اقتصادية</h3>
+                            <p>نصائح لتوفير المال دون أن تفقد متعة التجربة.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post" data-title="أساسيات إدارة المال الشخصي" data-cat="مالية">
+                    <a href="posts/أساسيات-إدارة-المال-الشخصي.html">
+                        <div class="thumb"><img src="assets/img/images%20%282%29.jpeg" alt="صورة إدارة المال"></div>
+                        <div class="meta">
+                            <div class="cat">مالية</div>
+                            <h3>أساسيات إدارة المال الشخصي</h3>
+                            <p>قواعد بسيطة لتبدأ رحلة الادخار والاستثمار.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <div id="noResults">⚠️ لا توجد نتائج مطابقة لبحثك.</div>
+        </section>
+
+        <section id="categories">
+            <h2 class="section-title">التصنيفات</h2>
+            <div class="cats">
+                <button class="cat-pill active" data-cat-filter>الكل</button>
+                <button class="cat-pill" data-cat-filter>تطوير الذات</button>
+                <button class="cat-pill" data-cat-filter>تقنية</button>
+                <button class="cat-pill" data-cat-filter>طبخ</button>
+                <button class="cat-pill" data-cat-filter>سفر</button>
+                <button class="cat-pill" data-cat-filter>ترفيه</button>
+                <button class="cat-pill" data-cat-filter>مالية</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>من نحن</h2>
+            <p>نحن فريق من الكتاب والمحتوى الرقمي المتحمسين لمشاركة المعرفة والأفكار الملهمة. تأسست مدونتنا في عام 2020 بهدف تقديم محتوى عالي الجودة يساعد القراء على تطوير أنفسهم واستكشاف عالم التقنية والسفر والمزيد. نحن ملتزمون بتقديم مقالات مدققة ومفيدة، مع التركيز على الجودة والابتكار في كل نشرة.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>تواصل معنا</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="اسمك" required aria-label="اسمك">
+                <input type="email" placeholder="بريدك الإلكتروني" required aria-label="بريدك الإلكتروني">
+                <textarea rows="5" placeholder="رسالتك" required aria-label="رسالتك"></textarea>
+                <button type="submit">إرسال الرسالة</button>
+            </form>
+        </section>
+
+        <section id="newsletter" class="newsletter">
+            <h2>اشترك في النشرة الإخبارية</h2>
+            <p>ابقَ على اطلاع بأحدث المقالات والنصائح مباشرة في بريدك الإلكتروني.</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                <button type="submit">اشترك</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Theme persistence
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+        themeToggle.addEventListener('click', () => {
+            const isLight = body.getAttribute('data-theme') === 'light';
+            const newTheme = isLight ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            themeToggle.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', newTheme);
+            
+            // Track theme change
+            trackEvent('إعدادات', 'تبديل السمة', newTheme);
+        });
+
+        // Normalize Arabic text for search
+        function normalizeArabic(text) {
+            return text
+                .replace(/[أآإ]/g, 'ا')
+                .replace(/ة/g, 'ه')
+                .replace(/[ى]/g, 'ي')
+                .trim();
+        }
+
+        // Slugify function for generating URLs
+        function slugify(text) {
+            return normalizeArabic(text)
+                .replace(/\s+/g, '-')
+                .replace(/[^\u0600-\u06FF\-]/g, '');
+        }
+
+        // Debounced search with Arabic normalization
+        const searchInput = document.getElementById('searchInput');
+        const posts = document.querySelectorAll('.post');
+        const noResults = document.getElementById('noResults');
+        let debounceTimeout;
+
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                const query = normalizeArabic(searchInput.value.toLowerCase().trim());
+                let visible = 0;
+                
+                posts.forEach(post => {
+                    const title = normalizeArabic(post.dataset.title.toLowerCase());
+                    const cat = normalizeArabic(post.dataset.cat.toLowerCase());
+                    const description = normalizeArabic(post.querySelector('.meta p').textContent.toLowerCase());
+                    
+                    if (title.includes(query) || cat.includes(query) || description.includes(query)) {
+                        post.style.display = '';
+                        visible++;
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+                
+                noResults.style.display = visible === 0 ? 'block' : 'none';
+                
+                // Track search
+                if (query.length > 2) {
+                    trackEvent('بحث', 'كتابة', query);
+                }
+            }, 300);
+        });
+
+
+        const catButtons = document.querySelectorAll('[data-cat-filter]');
+        catButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.textContent.trim();
+                let visible = 0;
+                posts.forEach(post => {
+                    if (cat === 'الكل' || post.dataset.cat === cat) {
+                        post.style.display = '';
+                        visible++;
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+                noResults.style.display = visible === 0 ? 'block' : 'none';
+                
+                trackEvent('التصنيفات', 'تصفية', cat);
+            });
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('show'));
+        });
+
+
+        function setFormLoading(form, isLoading) {
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            
+            if (isLoading) {
+                button.disabled = true;
+                button.innerHTML = '<span class="loading">⏳</span> جاري الإرسال...';
+            } else {
+                button.disabled = false;
+                button.textContent = originalText;
+            }
+        }
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            setFormLoading(newsletterForm, true);
+            
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                const email = newsletterForm.querySelector('input[type="email"]').value;
+                
+                // Track subscription
+                trackEvent('النشرة', 'اشتراك', email);
+                
+                alert(`تم الاشتراك بالبريد: ${email}`);
+                newsletterForm.reset();
+            } catch (error) {
+                alert('عذراً، حدث خطأ في الاشتراك. يرجى المحاولة مرة أخرى.');
+            } finally {
+                setFormLoading(newsletterForm, false);
+            }
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            setFormLoading(contactForm, true);
+            
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // Track contact form submission
+                trackEvent('الاتصال', 'إرسال رسالة', data.name);
+                
+                alert(`شكراً لك ${data.name}! تم استلام رسالتك وسنرد عليك قريباً.`);
+                contactForm.reset();
+            } catch (error) {
+                alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+            } finally {
+                setFormLoading(contactForm, false);
+            }
+        });
+
+        // Header scroll behavior
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ********************************************
+        // * الكود المعدل للنقر على المقالات (مهم!) *
+        // ********************************************
+        document.querySelectorAll('.post').forEach(post => {
+            post.addEventListener('click', (e) => {
+                const title = post.dataset.title;
+                const category = post.dataset.cat;
+                
+                // نمنع حدوث "نقرين" إذا كان الهدف هو وسم <a>
+                if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    // إذا تم النقر مباشرة على رابط <a>، دعه يعمل بشكل طبيعي
+                    // ويجب أن يكون قد تم تعيين الـ href بالفعل في HTML
+                } else {
+                    // إذا تم النقر على أي جزء آخر من البطاقة، سنقوم بالتوجيه يدوياً
+                    const link = post.querySelector('a');
+                    if (link && link.href) {
+                        e.preventDefault(); // نمنع أي حدث نقر افتراضي آخر محتمل
+                        window.location.href = link.href;
+                    }
+                }
+                
+                // تتبع الحدث يتم هنا بعد التأكد من أن التوجيه قد بدأ أو سيتم
+                trackEvent('مقالات', 'نقر', `${title} - ${category}`);
+            });
+        });
+        // ********************************************
+        // ********************************************
+
+        // Analytics tracking
+        function trackEvent(category, action, label) {
+            // Google Analytics (if available)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': category,
+                    'event_label': label
+                });
+            }
+            
+            // Local tracking
+            const analytics = JSON.parse(localStorage.getItem('analytics') || '{"events":[]}');
+            analytics.events.push({
+                category,
+                action,
+                label,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('analytics', JSON.stringify(analytics));
+            
+            console.log(`Event tracked: ${category} - ${action} - ${label}`);
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallPrompt();
+        });
+
+        function showInstallPrompt() {
+            // Only show if not already installed
+            if (window.matchMedia('(display-mode: standalone)').matches) return;
+            
+            const installBtn = document.createElement('button');
+            installBtn.textContent = 'تثبيت التطبيق';
+            installBtn.className = 'install-btn';
+            
+            installBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) return;
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    installBtn.remove();
+                    trackEvent('PWA', 'تثبيت', 'مقبول');
+                } else {
+                    trackEvent('PWA', 'تثبيت', 'مرفوض');
+                }
+                deferredPrompt = null;
+            });
+            
+            document.body.appendChild(installBtn);
+        }
+
+        // Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered: ', registration);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            console.log('New service worker found!');
+                            
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // Show update notification
+                                    showUpdateNotification();
+                                }
+                            });
+                        });
+                    })
+                    .catch(err => console.error('Service Worker registration failed:', err));
+            });
+        }
+
+        // Update notification
+        function showUpdateNotification() {
+            if (confirm('توجد نسخة جديدة من التطبيق. هل تريد تحديثه؟')) {
+                window.location.reload();
+                trackEvent('PWA', 'تحديث', 'مقبول');
+            } else {
+                trackEvent('PWA', 'تحديث', 'مرفوض');
+            }
+        }
+
+        console.log('مدونة محملة بنجاح!');
+    </script>
+</body>
+</html>
