@@ -1,592 +1,0 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>كيف تخطط لرحلة اقتصادية: 5 خطوات لتوفير المال | مدونتي</title>
-    <meta name="description" content="نصائح عملية وحيل ذكية لتنظيم رحلة ممتعة بأقل التكاليف الممكنة." />
-    
-    <!-- بيانات الـ SEO ومواقع التواصل الاجتماعي -->
-    <meta property="og:title" content="كيف تخطط لرحلة اقتصادية: 5 خطوات لتوفير المال">
-    <meta property="og:image" content="../assets/img/صورة-السفر-الرئيسية.jpg">
-    <link rel="manifest" href="../manifest.json">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "كيف تخطط لرحلة اقتصادية: 5 خطوات لتوفير المال",
-        "author": { "@type": "Person", "name": "أحمد السائح" },
-        "image": { "@type": "ImageObject", "url": "https://yourblog.com/assets/img/صورة-السفر-الرئيسية.jpg" }
-    }
-    </script>
-    
-    <!-- تضمين نفس تنسيقات CSS لصفحة المقالة -->
-    <style>
-        :root {
-            --bg: #ffffff;
-            --card: #f7f7f8;
-            --muted: #6b7280;
-            --accent: #0a84ff;
-            --text: #0b1220;
-            --glass: rgba(255,255,255,0.6);
-            --radius: 14px;
-            --shadow: 0 6px 24px rgba(11,18,32,0.08);
-            --content-width: 720px;
-            --pad: 28px;
-            scroll-behavior: smooth;
-        }
-        [data-theme="dark"] {
-            --bg: #0b0c0f;
-            --card: #0f1216;
-            --muted: #9aa3b2;
-            --accent: #3ea6ff;
-            --text: #e6eef8;
-            --glass: rgba(10,10,12,0.4);
-            --shadow: 0 8px 30px rgba(2,6,12,0.6);
-        }
-
-        /* الأساسيات */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7; 
-            transition: background 0.4s ease, color 0.4s ease;
-        }
-        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-        a:hover { text-decoration: underline; }
-        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
-        .container { max-width: 1200px; margin: auto; padding: 0 var(--pad); }
-        
-        /* Header & Nav - تم إزالة التعديلات الخاصة بـ .scrolled */
-        header { 
-            position: sticky; top: 0; z-index: 100; 
-            background: var(--glass); /* يبقي الشريط زجاجياً */
-            backdrop-filter: blur(8px); 
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        [data-theme="dark"] header { border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .nav { 
-            display: flex; 
-            align-items: center; 
-            padding: 12px 0; 
-        }
-        
-        /* تم إزالة فئة .scrolled */
-        
-        .logo { display: flex; align-items: center; gap: 10px; }
-        .logo .badge { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow); overflow: hidden; }
-        .logo .text div:first-child { font-weight: 700; }
-        .logo .text div:last-child { font-size: 12px; color: var(--muted); }
-        .nav-links { display: flex; gap: 20px; align-items: center; margin-inline-start: auto; }
-        .nav-links a { padding: 8px 10px; border-radius: 10px; font-weight: 600; color: var(--muted); }
-        .nav-links a:hover { background: var(--accent); color: white; }
-        .nav-actions { display: flex; gap: 10px; align-items: center; }
-        .icon-btn { background: var(--card); border: none; padding: 8px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
-        .icon-btn:hover { background: var(--accent); color: white; }
-        
-        /* 1. هيكل المقالة */
-        .article-wrapper {
-            max-width: 1000px; 
-            margin: 0 auto;
-            padding-bottom: 60px;
-        }
-
-        /* 2. تنسيق العنوان (H1) */
-        .article-header {
-            text-align: center;
-            padding: 60px 0 20px; 
-            z-index: 1;
-        }
-        .article-header h1 {
-            font-size: 2.7rem; 
-            font-weight: 800; 
-            line-height: 1.25;
-            margin-bottom: 15px;
-            max-width: 750px; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* شريط الميتا (مبسط) */
-        .article-meta-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            font-size: 0.9rem;
-            color: var(--muted);
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--card); 
-            max-width: var(--content-width);
-            margin: 0 auto 40px auto;
-        }
-        .article-meta-bar span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .article-meta-bar a {
-            color: var(--muted);
-            transition: color 0.3s ease;
-        }
-        .article-meta-bar a:hover {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .article-meta-bar .separator {
-            color: var(--muted);
-            font-size: 1.2em;
-            opacity: 0.5;
-        }
-
-        /* الصورة الرئيسية */
-        .article-thumb {
-            width: 90%; 
-            max-width: 900px;
-            height: auto;
-            max-height: 450px; 
-            margin: 0 auto 60px; 
-            overflow: hidden;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-        
-        /* 3. تنسيق جسم المقالة (نص القراءة) */
-        .article-body {
-            max-width: var(--content-width); 
-            margin: 0 auto;
-            padding: 0 var(--pad);
-            font-size: 1.05rem; 
-        }
-        .article-body h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 45px;
-            margin-bottom: 15px;
-            color: var(--text);
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--card); 
-        }
-        .article-body h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-        .article-body p {
-            margin-bottom: 25px;
-        }
-        .article-body ul, .article-body ol {
-            margin-bottom: 30px;
-            padding-right: 25px;
-        }
-        .article-body blockquote {
-            border-right: 4px solid var(--accent);
-            padding: 20px 25px;
-            margin: 40px 0;
-            background: var(--card);
-            border-radius: var(--radius);
-            font-style: italic;
-            font-size: 1em;
-            color: var(--text);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        
-        /* قسم شركات الحجز */
-        .travel-partners {
-            padding: 50px 0;
-            max-width: 800px;
-            margin: 40px auto;
-            background: var(--card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        .travel-partners h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--accent);
-            padding: 0 var(--pad);
-        }
-        .partner-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 0 var(--pad);
-        }
-        .partner-card {
-            background: var(--bg);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        .partner-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .partner-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .partner-card p {
-            font-size: 0.9rem;
-            color: var(--muted);
-            margin-bottom: 12px;
-        }
-        .partner-card .cta-link {
-            display: inline-block;
-            padding: 8px 15px;
-            background: var(--accent);
-            color: white;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        /* 4. تنسيق المقالات ذات الصلة (محتوى ذات صلة) */
-        .related-posts {
-            padding: 50px 0;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        h2.section-title { 
-            font-size: 22px; 
-            margin-bottom: 30px; 
-            text-align: center;
-            font-weight: 700;
-            padding-bottom: 10px;
-            color: var(--text);
-        }
-        .posts-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px;
-            padding: 0 var(--pad);
-        }
-        .post { 
-            background: var(--card); 
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: transform .3s, box-shadow .3s;
-        }
-        .post a { display: block; }
-        .post:hover { transform: translateY(-5px); }
-        .post .thumb { height: 160px; overflow: hidden; }
-        .post .thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .post .meta { padding: 16px; }
-        .post .meta .cat { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
-        .post .meta h3 { margin: 0 0 8px; font-size: 1.05rem; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            :root { --pad: 16px; }
-            .article-header {
-                padding: 40px 0 20px;
-            }
-            .article-header h1 {
-                font-size: 2rem;
-            }
-            .article-meta-bar {
-                flex-direction: column;
-                gap: 5px;
-            }
-            .article-meta-bar .separator {
-                display: none;
-            }
-            .article-body {
-                font-size: 1rem;
-            }
-            .article-thumb {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-            .partner-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-    </style>
-</head>
-
-<body data-theme="light">
-    <header>
-        <div class="nav container">
-            <!-- الروابط تستخدم مسار نسبي للخروج من مجلد posts/ -->
-            <a href="../index.html" class="logo">
-                <div class="badge">
-                    <img src="../assets/img/logo.jpg" onerror="this.src='https://placehold.co/40x40/0a84ff/ffffff?text=L'" alt="شعار مدونتي">
-                </div>
-                <div class="text">
-                    <div>مدونتي</div>
-                    <div>أفكار تستحق القراءة</div>
-                </div>
-            </a>
-
-            <nav class="nav-links" aria-label="روابط الموقع">
-                <a href="../index.html#home">الرئيسية</a>
-                <a href="../index.html#posts">المقالات</a>
-                <a href="../index.html#about">من نحن</a>
-            </nav>
-
-            <div class="nav-actions">
-                <button class="icon-btn" id="themeToggle" title="تبديل الوضع" aria-label="تبديل بين الوضع الفاتح والداكن">🌙</button>
-                <button class="icon-btn" id="menuBtn" aria-label="قائمة التنقل" aria-expanded="false">☰</button>
-            </div>
-        </div>
-    </header>
-    
-    <main class="article-wrapper">
-        <article>
-            <header class="article-header">
-                <h1>كيف تخطط لرحلة اقتصادية: 5 خطوات لتوفير المال دون التضحية بالمتعة</h1>
-                
-                <div class="article-meta-bar">
-                    <span>الكاتب: <a href="#">أحمد السائح</a></span>
-                    <span class="separator">|</span>
-                    <span>تاريخ النشر: <time datetime="2025-10-15">15 أكتوبر 2025</time></span>
-                    <span class="separator">|</span>
-                    <span>التصنيف: <a href="../index.html#categories">سفر</a></span>
-                </div>
-            </header>
-            
-            <div class="article-thumb">
-                <img src="../assets/img/images%20%283%29.jpeg" onerror="this.src='https://placehold.co/900x450/3498db/ffffff?text=Affordable+Travel'" alt="صورة توضيحية لتخطيط السفر الاقتصادي">
-            </div>
-
-            <div class="article-body">
-                <p><strong>مقدمة المقالة:</strong> السفر لا يجب أن يكون رفاهية مقتصرة على الأثرياء. باتباع بعض الاستراتيجيات الذكية، يمكنك استكشاف العالم دون إفراغ محفظتك. سنستعرض هنا أهم 5 خطوات عملية لتنظيم رحلة لا تُنسى بأقل التكاليف الممكنة، بدءاً من حجز الطيران وحتى الإقامة.</p>
-
-                <h2>1. مرونة التواريخ هي مفتاح توفير الطيران</h2>
-                <p>تعد تذاكر الطيران عادةً أكبر مصروف في الرحلة. السر هنا هو المرونة. إذا كنت قادراً على السفر في غير مواسم الذروة (مثل أواخر الصيف أو الإجازات الرسمية)، يمكنك توفير ما يصل إلى 40% من تكلفة التذكرة.</p>
-                
-                <h3>نصائح لحجز الطيران:</h3>
-                <ul>
-                    <li><p><strong>استخدم وضع التصفح المتخفي:</strong> ابحث عن الرحلات في وضع التصفح الخفي (Incognito) لمنع المواقع من رفع الأسعار بناءً على عمليات البحث المتكررة.</p></li>
-                    <li><p><strong>تجنب الجمعة والأحد:</strong> غالباً ما تكون الأيام الأرخص للطيران هي الثلاثاء والأربعاء.</p></li>
-                    <li><p><strong>اختر مطارات بديلة:</strong> قد تكون المطارات الأصغر والأبعد عن المدينة أرخص بكثير.</p></li>
-                </ul>
-                
-                <blockquote>
-                    "السفر الاقتصادي لا يعني التضحية بالمتعة، بل يعني التضحية بالكماليات غير الضرورية والتخطيط المسبق."
-                </blockquote>
-                
-                <h2>2. الإقامة الذكية: تجاوز الفنادق التقليدية</h2>
-                <p>الفنادق المترفة قد تكون مكلفة جداً. الإقامة في أماكن محلية أو فنادق صغيرة توفر لك المال وتمنحك تجربة ثقافية أعمق.</p>
-                
-                <h3>بدائل الإقامة الموفرة:</h3>
-                <ol>
-                    <li><p><strong>شقق العطلات (Airbnb):</strong> توفر خياراً اقتصادياً للمجموعات، وغالباً ما تتضمن مطبخاً يمكن استخدامه لتقليل تكلفة الطعام.</p></li>
-                    <li><p><strong>النزل (Hostels):</strong> خيار ممتاز للمسافرين المنفردين الباحثين عن التفاعل الاجتماعي بأقل الأسعار.</p></li>
-                    <li><p><strong>الإقامة خارج المركز:</strong> ابحث عن فنادق تقع على بعد محطتين أو ثلاث محطات مترو من وسط المدينة؛ ستكون أرخص بكثير.</p></li>
-                </ol>
-
-                <h2>3. استبدال المطاعم بـ "تجربة السكان المحليين"</h2>
-                <p>تكلفة تناول الطعام في الخارج قد تستنزف ميزانيتك. جرب المتاجر المحلية والأسواق الشعبية بدلاً من المقاهي السياحية.</p>
-                
-                <h3>حيل الطعام الموفرة:</h3>
-                <ul>
-                    <li><p><strong>طبق الغداء الخاص:</strong> في أوروبا، تكون وجبة الغداء (Lunch Menu) في المطاعم الفاخرة أرخص بكثير من وجبة العشاء.</p></li>
-                    <li><p><strong>الأسواق المحلية:</strong> اشترِ الفواكه والخضار والجبن من الأسواق واصنع ساندويشاتك الخاصة للتنزه.</p></li>
-                    <li><p><strong>شرب الماء:</strong> في بعض المدن الأوروبية، قد يكون شراء زجاجة مياه أغلى من شراء زجاجة عصير؛ كن واعياً لهذا الفارق.</p></li>
-                </ul>
-                
-                <h2>4. النقل العام والمشي</h2>
-                <p>اعتمد على وسائل النقل العام وشراء تذاكر التنقل اليومية أو الأسبوعية. المشي هو أفضل طريقة لاكتشاف المدينة وتوفير المال.</p>
-                
-                <h2>5. تخصيص ميزانية للطوارئ</h2>
-                <p>خصص جزءاً بسيطاً من ميزانيتك للطوارئ (تأخير رحلة، فقدان أمتعة، إلخ). هذا يمنع أي حدث مفاجئ من إفساد رحلتك.</p>
-                
-            </div>
-            </article>
-        
-        <!-- قسم الشركات الموصى بها -->
-        <section class="travel-partners">
-            <h2 class="section-title">شركات الحجز الموصى بها (روابط مباشرة)</h2>
-            <p style="color:var(--muted); margin-bottom: 30px; padding: 0 var(--pad);">لضمان أفضل الأسعار، نوصي باستخدام هذه المنصات الموثوقة لحجز رحلاتك وإقامتك.</p>
-            
-            <div class="partner-grid">
-                
-                <div class="partner-card">
-                    <h3>Skyscanner</h3>
-                    <p>أفضل منصة لمقارنة أسعار تذاكر الطيران بين مختلف الشركات.</p>
-                    <a href="https://www.skyscanner.com" target="_blank" class="cta-link">قارن الأسعار الآن</a>
-                </div>
-
-                <div class="partner-card">
-                    <h3>Booking.com</h3>
-                    <p>مجموعة واسعة من الفنادق والشقق بأسعار منافسة.</p>
-                    <a href="https://www.booking.com" target="_blank" class="cta-link">اكتشف الإقامات</a>
-                </div>
-
-                <div class="partner-card">
-                    <h3>Airbnb</h3>
-                    <p>لحجز شقق واستوديوهات بتجربة سكن محلي أصيل.</p>
-                    <a href="https://www.airbnb.com" target="_blank" class="cta-link">احجز شقة</a>
-                </div>
-
-                <div class="partner-card">
-                    <h3>Google Flights</h3>
-                    <p>أداة جوجل لمراقبة الأسعار وتتبع أرخص مواعيد السفر.</p>
-                    <a href="https://www.google.com/flights" target="_blank" class="cta-link">راقب الأسعار</a>
-                </div>
-                
-            </div>
-        </section>
-
-
-        <hr style="margin: 60px auto; max-width: 900px; border-color: var(--card);">
-        
-        <section class="related-posts">
-            <h2 class="section-title">مقالات ذات صلة</h2>
-            <div class="posts-grid">
-                <!-- المقالة 1: مالية -->
-                <article class="post">
-                    <a href="../posts/أساسيات-إدارة-المال-الشخصي.html">
-                        <div class="thumb"><img src="../assets/img/images%20%282%29.jpeg" onerror="this.src='https://placehold.co/300x160/2c3e50/ffffff?text=Finance'" alt="صورة إدارة المال"></div>
-                        <div class="meta">
-                            <div class="cat">مالية</div>
-                            <h3>أساسيات إدارة المال الشخصي</h3>
-                            <p>قواعد بسيطة لتبدأ رحلة الادخار والاستثمار.</p>
-                        </div>
-                    </a>
-                </article>
-                
-                <!-- المقالة 2: تقنية -->
-                <article class="post">
-                    <a href="../posts/أفضل-الأدوات-للتدوين-في-2025.html">
-                        <div class="thumb"><img src="../assets/img/images%20%281%29.jpeg" onerror="this.src='https://placehold.co/300x160/e67e22/ffffff?text=Tech'" alt="صورة أدوات التدوين"></div>
-                        <div class="meta">
-                            <div class="cat">تقنية</div>
-                            <h3>أفضل الأدوات للتدوين في 2025</h3>
-                            <p>جولة في الأدوات التي تسهل كتابة ونشر المحتوى بسرعة واحتراف.</p>
-                        </div>
-                    </a>
-                </article>
-                
-                <!-- المقالة 3: طبخ - تم تصحيح المسار ليكون أسهل وأكثر موثوقية -->
-                <article class="post">
-                    <a href="../posts/وصفات-سهلة-لعشاء-يومي.html">
-                        <div class="thumb"><img src="../assets/img/طبخ%20.webp" onerror="this.src='https://placehold.co/300x160/795548/ffffff?text=Cooking'" alt="صورة وصفات طبخ"></div>
-                        <div class="meta">
-                            <div class="cat">طبخ</div>
-                            <h3>كيف تتقن فن الطبخ المنزلي (150 وصفة)</h3>
-                            <p>دليل شامل للطبخ ومحرك بحث داخلي عن الوصفات.</p>
-                        </div>
-                    </a>
-                </article>
-                
-            </div>
-        </section>
-    </main>
-    <div class="article-body">
-    <p>
-        <strong>مقدمة المقالة:</strong> السفر لا يجب أن يكون رفاهية مقتصرة على الأثرياء. باتباع بعض الاستراتيجيات الذكية، يمكنك استكشاف العالم دون إفراغ محفظتك. سنستعرض هنا أهم <strong>6 خطوات عملية</strong> لتنظيم رحلة لا تُنسى بأقل التكاليف الممكنة، بدءاً من حجز الطيران وحتى الإقامة والأنشطة.
-    </p>
-
-    <h2>1. مرونة التواريخ هي مفتاح توفير الطيران</h2>
-    <p>تعد تذاكر الطيران عادةً أكبر مصروف في الرحلة. السر هنا هو المرونة. إذا كنت قادراً على السفر في غير مواسم الذروة (مثل أواخر الصيف أو الإجازات الرسمية)، يمكنك توفير ما يصل إلى 40% من تكلفة التذكرة.</p>
-    
-    <h3>نصائح لحجز الطيران:</h3>
-    <ul>
-        <li><p><strong>استخدم وضع التصفح المتخفي:</strong> ابحث عن الرحلات في وضع التصفح الخفي (Incognito) لمنع المواقع من رفع الأسعار بناءً على عمليات البحث المتكررة.</p></li>
-        <li><p><strong>تجنب الجمعة والأحد:</strong> غالباً ما تكون الأيام الأرخص للطيران هي الثلاثاء والأربعاء.</p></li>
-        <li><p><strong>اختر مطارات بديلة:</strong> قد تكون المطارات الأصغر والأبعد عن المدينة أرخص بكثير.</p></li>
-    </ul>
-    
-    <blockquote>
-        "السفر الاقتصادي لا يعني التضحية بالمتعة، بل يعني التضحية بالكماليات غير الضرورية والتخطيط المسبق."
-    </blockquote>
-    
-    <h2>2. الإقامة الذكية: تجاوز الفنادق التقليدية</h2>
-    <p>الفنادق المترفة قد تكون مكلفة جداً. الإقامة في أماكن محلية أو فنادق صغيرة توفر لك المال وتمنحك تجربة ثقافية أعمق.</p>
-    
-    <h3>بدائل الإقامة الموفرة:</h3>
-    <ol>
-        <li><p><strong>شقق العطلات (Airbnb):</strong> توفر خياراً اقتصادياً للمجموعات، وغالباً ما تتضمن مطبخاً يمكن استخدامه لتقليل تكلفة الطعام.</p></li>
-        <li><p><strong>النزل (Hostels):</strong> خيار ممتاز للمسافرين المنفردين الباحثين عن التفاعل الاجتماعي بأقل الأسعار.</p></li>
-        <li><p><strong>الإقامة خارج المركز:</strong> ابحث عن فنادق تقع على بعد محطتين أو ثلاث محطات مترو من وسط المدينة؛ ستكون أرخص بكثير.</p></li>
-    </ol>
-
-    <h2>3. استبدال المطاعم بـ "تجربة السكان المحليين"</h2>
-    <p>تكلفة تناول الطعام في الخارج قد تستنزف ميزانيتك. جرب المتاجر المحلية والأسواق الشعبية بدلاً من المقاهي السياحية.</p>
-    
-    <h3>حيل الطعام الموفرة:</h3>
-    <ul>
-        <li><p><strong>طبق الغداء الخاص:</strong> في أوروبا، تكون وجبة الغداء (Lunch Menu) في المطاعم الفاخرة أرخص بكثير من وجبة العشاء.</p></li>
-        <li><p><strong>الأسواق المحلية:</strong> اشترِ الفواكه والخضار والجبن من الأسواق واصنع ساندويشاتك الخاصة للتنزه.</p></li>
-        <li><p><strong>شرب الماء:</strong> في بعض المدن الأوروبية، قد يكون شراء زجاجة مياه أغلى من شراء زجاجة عصير؛ كن واعياً لهذا الفارق.</p></li>
-    </ul>
-    
-    <h2>4. النقل العام والمشي</h2>
-    <p>اعتمد على وسائل النقل العام وشراء تذاكر التنقل اليومية أو الأسبوعية. المشي هو أفضل طريقة لاكتشاف المدينة وتوفير المال. في المدن الكبرى، تذكرة النقل الأسبوعية توفر عليك تكلفة التاكسي بالكامل.</p>
-    
-    <hr>
-    
-    <h2>5. الأنشطة المجانية: استمتع بالمجان!</h2>
-    <p>العديد من التجارب الممتعة في أي مدينة لا تتطلب دفع ثمن تذكرة. كن سائحاً ذكياً واستغل كل ما تقدمه المدينة مجاناً.</p>
-    
-    <h3>أمثلة على الأنشطة منخفضة التكلفة:</h3>
-    <ul>
-        <li><p><strong>المتاحف المجانية:</strong> ابحث عن المتاحف التي تقدم الدخول المجاني أو بأسعار رمزية في أيام محددة (كالكثير من متاحف لندن).</p></li>
-        <li><p><strong>جولات المشي المجانية:</strong> العديد من المدن تقدم جولات سير حرة (Free Walking Tours) يقودها السكان المحليون وتعتمد على الإكرامية (Tip-Based).</p></li>
-        <li><p><strong>الحدائق العامة والساحات:</strong> استكشاف المتنزهات الكبرى والساحات التاريخية هو نشاط مجاني يمنحك انطباعاً حقيقياً عن ثقافة المدينة.</p></li>
-    </ul>
-    
-    <h2>6. تخصيص ميزانية للطوارئ</h2>
-    <p>خصص جزءاً بسيطاً من ميزانيتك للطوارئ (تأخير رحلة، فقدان أمتعة، إلخ). هذا يمنع أي حدث مفاجئ من إفساد رحلتك. القاعدة العامة هي تخصيص **10-15%** من إجمالي الميزانية كمبلغ احتياطي.</p>
-    
-    <hr>
-    
-    <h2>الخاتمة: انطلق في رحلتك الذكية!</h2>
-    <p>تخطيط رحلة اقتصادية يتطلب القليل من البحث المسبق والكثير من المرونة. تذكر أن الهدف ليس إنفاق أقل قدر ممكن من المال فحسب، بل هو الاستمتاع بتجارب أصيلة وثرية لا توفرها الفنادق الفخمة أو المطاعم السياحية. ابدأ بالتخطيط مبكراً، كن مرناً في خياراتك، واستعد لرحلة لا تُنسى بميزانية مريحة.</p>
-
-</div>
-    
-    <footer style="text-align: center; padding: 25px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.05);">
-        <p>&copy; 2025 مدونتي. أفكار تستحق القراءة.</p>
-    </footer>
-
-    <script>
-        // Theme persistence and toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-        themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
-
-        themeToggle.addEventListener('click', () => {
-            const isLight = body.getAttribute('data-theme') === 'light';
-            const newTheme = isLight ? 'dark' : 'light';
-            body.setAttribute('data-theme', newTheme);
-            themeToggle.textContent = isLight ? '☀️' : '🌙';
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Menu button toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.querySelector('.nav-links');
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-            menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('show'));
-        });
-        
-        // Fix for placeholder image
-        document.querySelectorAll('img[onerror]').forEach(img => {
-            img.addEventListener('error', function() {
-                this.style.filter = 'grayscale(100%)';
-            });
-        });
-
-        // تأثير الشريط الزجاجي (القديم) - لا يتغير بالتمرير
-        const header = document.querySelector('header');
-        // تم إزالة دوال handleScroll وكود التمرير
-    </script>
-</body>
-</html>
