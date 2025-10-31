@@ -1,612 +1,0 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>دليل المبتدئين لإتقان فن إدارة المال الشخصي في 5 خطوات | مدونتي</title>
-    <meta name="description" content="تعلم أهم 5 خطوات لتحويل وضعك المالي من عشوائي إلى مستقر ومزدهر." />
-    
-    <meta property="og:title" content="دليل المبتدئين لإتقان فن إدارة المال الشخصي في 5 خطوات">
-    <meta property="og:image" content="../assets/img/صورة-المال.jpg">
-    <link rel="manifest" href="../manifest.json">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "دليل المبتدئين لإتقان فن إدارة المال الشخصي في 5 خطوات",
-        "author": { "@type": "Person", "name": "خبير مالي" },
-        "image": { "@type": "ImageObject", "url": "https://yourblog.com/assets/img/صورة-المال.jpg" }
-    }
-    </script>
-    
-    <style>
-        :root {
-            --bg: #ffffff;
-            --card: #f7f7f8;
-            --muted: #6b7280;
-            --accent: #0a84ff;
-            --text: #0b1220;
-            --glass: rgba(255,255,255,0.6);
-            --radius: 14px;
-            --shadow: 0 6px 24px rgba(11,18,32,0.08);
-            --content-width: 720px;
-            --pad: 28px;
-            scroll-behavior: smooth;
-        }
-        [data-theme="dark"] {
-            --bg: #0b0c0f;
-            --card: #0f1216;
-            --muted: #9aa3b2;
-            --accent: #3ea6ff;
-            --text: #e6eef8;
-            --glass: rgba(10,10,12,0.4);
-            --shadow: 0 8px 30px rgba(2,6,12,0.6);
-        }
-
-        /* الأساسيات */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7; 
-            transition: background 0.4s ease, color 0.4s ease;
-        }
-        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-        a:hover { text-decoration: underline; }
-        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
-        .container { max-width: 1200px; margin: auto; padding: 0 var(--pad); }
-        
-        /* Header & Nav - (التنسيقات تم نسخها بالكامل كما هي من الهيكل المقدم) */
-        header { 
-            position: sticky; top: 0; z-index: 100; 
-            background: var(--glass); backdrop-filter: blur(8px); 
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        [data-theme="dark"] header { border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .nav { display: flex; align-items: center; padding: 12px 0; }
-        .logo { display: flex; align-items: center; gap: 10px; }
-        .logo .badge { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow); overflow: hidden; }
-        .logo .text div:first-child { font-weight: 700; }
-        .logo .text div:last-child { font-size: 12px; color: var(--muted); }
-        .nav-links { display: flex; gap: 20px; align-items: center; margin-inline-start: auto; }
-        .nav-links a { padding: 8px 10px; border-radius: 10px; font-weight: 600; color: var(--muted); }
-        .nav-links a:hover { background: var(--accent); color: white; }
-        .nav-actions { display: flex; gap: 10px; align-items: center; }
-        .icon-btn { background: var(--card); border: none; padding: 8px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
-        .icon-btn:hover { background: var(--accent); color: white; }
-        
-        /* 1. هيكل المقالة */
-        .article-wrapper {
-            max-width: 1000px; 
-            margin: 0 auto;
-            padding-bottom: 60px;
-        }
-
-        /* 2. تنسيق العنوان (H1) */
-        .article-header {
-            text-align: center;
-            padding: 60px 0 20px; 
-            z-index: 1;
-        }
-        .article-header h1 {
-            font-size: 2.7rem; 
-            font-weight: 800; 
-            line-height: 1.25;
-            margin-bottom: 15px;
-            max-width: 750px; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* شريط الميتا (مبسط) */
-        .article-meta-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            font-size: 0.9rem;
-            color: var(--muted);
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--card); 
-            max-width: var(--content-width);
-            margin: 0 auto 40px auto;
-        }
-        .article-meta-bar span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .article-meta-bar a {
-            color: var(--muted);
-            transition: color 0.3s ease;
-        }
-        .article-meta-bar a:hover {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .article-meta-bar .separator {
-            color: var(--muted);
-            font-size: 1.2em;
-            opacity: 0.5;
-        }
-
-        /* الصورة الرئيسية */
-        .article-thumb {
-            width: 50%; 
-            max-width: 900px;
-            height: auto;
-            max-height: 450px; 
-            margin: 0 auto 60px; 
-            overflow: hidden;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-        
-        /* 3. تنسيق جسم المقالة (نص القراءة) */
-        .article-body {
-            max-width: var(--content-width); 
-            margin: 0 auto;
-            padding: 0 var(--pad);
-            font-size: 1.05rem; 
-        }
-        .article-body h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 45px;
-            margin-bottom: 15px;
-            color: var(--text);
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--card); 
-        }
-        .article-body h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-        .article-body p {
-            margin-bottom: 25px;
-        }
-        .article-body ul, .article-body ol {
-            margin-bottom: 30px;
-            padding-right: 25px;
-        }
-        .article-body blockquote {
-            border-right: 4px solid var(--accent);
-            padding: 20px 25px;
-            margin: 40px 0;
-            background: var(--card);
-            border-radius: var(--radius);
-            font-style: italic;
-            font-size: 1em;
-            color: var(--text);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        
-        /* 4. تنسيق المقالات ذات الصلة (محتوى ذات صلة) */
-        .related-posts {
-            padding: 50px 0;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        h2.section-title { 
-            font-size: 22px; 
-            margin-bottom: 30px; 
-            text-align: center;
-            font-weight: 700;
-            padding-bottom: 10px;
-            color: var(--text);
-        }
-        .posts-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px;
-            padding: 0 var(--pad);
-        }
-        .post { 
-            background: var(--card); 
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: transform .3s, box-shadow .3s;
-        }
-        .post a { display: block; }
-        .post:hover { transform: translateY(-5px); }
-        .post .thumb { height: 160px; overflow: hidden; }
-        .post .thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .post .meta { padding: 16px; }
-        .post .meta .cat { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
-        .post .meta h3 { margin: 0 0 8px; font-size: 1.05rem; }
-
-        /* Responsive - (التنسيقات تم نسخها بالكامل كما هي من الهيكل المقدم) */
-        @media (max-width: 768px) {
-            :root { --pad: 16px; }
-            .article-header {
-                padding: 40px 0 20px;
-            }
-            .article-header h1 {
-                font-size: 2rem;
-            }
-            .article-meta-bar {
-                flex-direction: column;
-                gap: 5px;
-            }
-            .article-meta-bar .separator {
-                display: none;
-            }
-            .article-body {
-                font-size: 1rem;
-            }
-            .article-thumb {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-        }
-
-        /* Money Management Calculator Styles (بدلاً من Recipe Search) */
-        #money-management-tool {
-            max-width: 800px;
-            margin: 60px auto 40px auto;
-            padding: var(--pad);
-            background: var(--card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        #money-management-tool h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-        #budgetForm {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        #budgetForm label {
-            font-weight: 600;
-            color: var(--text);
-            display: block;
-            margin-bottom: 5px;
-        }
-        #budgetForm input, #budgetForm select {
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-            background: var(--bg);
-            color: var(--text);
-            outline: none;
-            transition: border-color 0.3s;
-        }
-        [data-theme="dark"] #budgetForm input, [data-theme="dark"] #budgetForm select {
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        #budgetForm input:focus, #budgetForm select:focus {
-            border-color: var(--accent);
-        }
-        #budgetForm button {
-            padding: 12px 20px;
-            border-radius: 10px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        #budgetForm button:hover:not(:disabled) {
-            background: #007aff;
-        }
-        #budget-output {
-            text-align: right;
-            padding-top: 20px;
-            border-top: 1px dashed var(--muted);
-            margin-top: 20px;
-        }
-        .budget-result-section {
-            margin-bottom: 20px;
-        }
-        .budget-result-section h3 {
-            font-size: 1.5rem;
-            color: var(--text);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-align: right;
-        }
-        .result-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px dotted var(--card);
-        }
-        .loading-spinner {
-            border: 4px solid var(--card);
-            border-top: 4px solid var(--accent);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
-</head>
-
-<body data-theme="light">
-    <header>
-        <div class="nav container">
-            <a href="../index.html" class="logo">
-                <div class="badge">
-                    <img src="../assets/img/logo.jpg" onerror="this.src='https://placehold.co/40x40/0a84ff/ffffff?text=L'" alt="شعار مدونتي">
-                </div>
-                <div class="text">
-                    <div>مدونتي</div>
-                    <div>أفكار تستحق القراءة</div>
-                </div>
-            </a>
-
-            <nav class="nav-links" aria-label="روابط الموقع">
-                <a href="../index.html#home">الرئيسية</a>
-                <a href="../index.html#posts">المقالات</a>
-                <a href="../index.html#about">من نحن</a>
-            </nav>
-
-            <div class="nav-actions">
-                <button class="icon-btn" id="themeToggle" title="تبديل الوضع" aria-label="تبديل بين الوضع الفاتح والداكن">🌙</button>
-                <button class="icon-btn" id="menuBtn" aria-label="قائمة التنقل" aria-expanded="false">☰</button>
-            </div>
-        </div>
-    </header>
-    
-    <main class="article-wrapper">
-        <article>
-            <header class="article-header">
-                <h1>دليل المبتدئين لإتقان فن إدارة المال الشخصي في 5 خطوات</h1>
-                
-                <div class="article-meta-bar">
-                    <span>الكاتب: <a href="#">خبير مالي</a></span>
-                    <span class="separator">|</span>
-                    <span>تاريخ النشر: <time datetime="2025-10-31">31 أكتوبر 2025</time></span>
-                    <span class="separator">|</span>
-                    <span>التصنيف: <a href="../index.html#categories">مالية</a></span>
-                </div>
-            </header>
-            
-            <div class="article-thumb">
-                <img src="../assets/img/صور-فلوس-جديدة (1) (Phone).jpeg" onerror="this.src='https://placehold.co/900x450/2ecc71/ffffff?text=Personal+Finance+Mastery'" alt="صورة توضيحية لإدارة المال">
-            </div>
-
-            <div class="article-body">
-                <p><strong>مقدمة المقالة:</strong> إدارة المال الشخصي ليست مجرد معادلات حسابية معقدة، بل هي مجموعة من العادات والقرارات اليومية التي تبني استقرارك المالي ومستقبلك. سواء كنت حديث التخرج أو بدأت للتو في الشعور بضيق الميزانية، فإن إتقان أساسيات التخطيط المالي سيحول القلق إلى سيطرة وثقة. سنتعرف هنا على 5 خطوات مركزية يمكنك تطبيقها لتحسين وضعك المالي بشكل جذري ومستدام.</p>
-
-                <h2>1. تحديد الأهداف المالية الواقعية والواضحة</h2>
-                <p>لا يمكنك التخطيط لرحلة دون معرفة وجهتك. إدارة مالك تبدأ بتحديد ما تريده على المدى القريب (مثل سداد ديون صغيرة أو ادخار مبلغ للطوارئ) والمدى البعيد (مثل شراء منزل أو التقاعد المبكر). يجب أن تكون أهدافك **محددة، قابلة للقياس، وقابلة للتحقيق**.</p>
-                
-                <h3>كيف تحدد أهدافك المالية:</h3>
-                <ul>
-                    <li><p><strong>قاعدة الـ 50/30/20:</strong> خصص 50% للاحتياجات الأساسية (إيجار، فواتير)، 30% للكماليات (ترفيه، مطاعم)، و 20% **للادخار والاستثمار**.</p></li>
-                    <li><p><strong>صندوق الطوارئ أولاً:</strong> قبل أي استثمار، ابدأ بتوفير مبلغ يغطي نفقات 3-6 أشهر كحد أدنى. هذا شبكة أمانك ضد أي مفاجآت.</p></li>
-                    <li><p><strong>الديون السيئة:</strong> ضع خطة واضحة لسداد الديون ذات الفائدة العالية (مثل ديون بطاقات الائتمان) أولاً، فخسائرها تلتهم مدخراتك.</p></li>
-                </ul>
-                
-                <blockquote>
-                    "الأموال لا تجلب السعادة، لكن التخطيط الجيد لها يزيل قدراً كبيراً من القلق والتوتر في الحياة اليومية."
-                </blockquote>
-                
-                <h2>2. تتبع النفقات وإعداد الميزانية الشهرية 📝</h2>
-                <p>المعرفة قوة. لا يكفي معرفة كم تكسب، بل الأهم هو أين تذهب أموالك بالضبط. استخدام تطبيق لتتبع النفقات أو جدول بيانات بسيط يوضح لك التسرب المالي غير الضروري. بمجرد أن تعرف أين تذهب أموالك، يصبح إعداد الميزانية أمراً سهلاً.</p>
-                
-                <h3>أدوات ونصائح للتتبع والميزانية:</h3>
-                <ol>
-                    <li><p><strong>سجّل كل شيء:</strong> لمدة شهر واحد، قم بتسجيل **كل عملية شراء**، مهما كانت صغيرة. غالبًا ما تجد نفقات مدهشة تتراكم (مثل القهوة اليومية).</p></li>
-                    <li><p><strong>الميزانية الصفرية:</strong> هذا يعني أنك تخصّص هدفًا لكل ريال أو دولار تكسبه: دخل - (مصروفات + ادخار) = صفر. وبهذه الطريقة أنت تسيطر على أموالك بدلاً من أن تسيطر هي عليك.</p></li>
-                    <li><p><strong>أتمتة الادخار:</strong> اجعل عملية الادخار تحدث تلقائيًا في يوم نزول الراتب. خصص النسبة التي حددتها (20% مثلاً) لتنتقل فوراً إلى حساب ادخار أو استثمار منفصل. **ادفع لنفسك أولاً**.</p></li>
-                </ol>
-
-                <h2>3. الاستثمار الذكي (حتى بمبالغ صغيرة)</h2>
-                <p>مجرد الادخار لا يكفي، يجب أن تجعل أموالك تعمل من أجلك. لا تتطلب عملية الاستثمار أن تكون خبيرًا، بل تبدأ بفهم أساسيات المخاطر والعوائد. ابدأ بالخيارات البسيطة ذات المخاطر المنخفضة.</p>
-
-                <h3>نصائح للمستثمر المبتدئ:</h3>
-                <ul>
-                    <li><p><strong>تنويع الاستثمار:</strong> لا تضع كل بيضك في سلة واحدة. ابدأ بالصناديق المتداولة في البورصة (ETFs) التي تتتبع مؤشرات سوق واسعة.</p></li>
-                    <li><p><strong>بدء مبكر:</strong> الاستفادة من قوة **الفائدة المركبة**. حتى لو بدأت بمبلغ صغير، فإن عنصر الوقت هو أثمن أصولك في الاستثمار. ابدأ اليوم.</p></li>
-                </ul>
-                
-                <h2>4. تجربة أداة الميزانية التفاعلية (للبدء الفوري)</h2>
-                <p>الآن بعد أن أتقنت أساسيات التخطيط والتتبع، يمكنك استخدام الأداة التفاعلية أدناه لحساب توزيع ميزانيتك وفقًا لقاعدة الـ 50/30/20، وتحديد المبلغ المتاح للطوارئ.</p>
-
-                <p>رحلة إدارة المال هي رحلة مستمرة تتطلب التزاماً ومرونة. ابدأ بخطوة بسيطة والتزم بها، وسترى الفارق.</p>
-                
-            </div>
-            </article>
-        
-        <hr style="margin: 60px auto; max-width: 900px; border-color: var(--card);">
-        
-        <section id="money-management-tool">
-            <h2>💰 آلة حاسبة الميزانية 50/30/20 </h2>
-            <p style="color:var(--muted); margin-bottom: 20px;">أدخل دخلك الشهري لترى تقسيم الميزانية المقترح.</p>
-            
-            <form id="budgetForm">
-                <div>
-                    <label for="monthlyIncome">صافي الدخل الشهري (بعد الضرائب)</label>
-                    <input type="number" id="monthlyIncome" placeholder="مثال: 5000" required aria-label="أدخل الدخل الشهري">
-                </div>
-                <div>
-                    <label for="existingSavings">مبلغ الادخار الحالي للطوارئ</label>
-                    <input type="number" id="existingSavings" placeholder="مثال: 10000" aria-label="أدخل مبلغ الادخار الحالي">
-                </div>
-                <button type="submit" id="calculateBudgetBtn">احسب الميزانية والوضع المالي</button>
-            </form>
-            
-            <div id="budget-output">
-                </div>
-        </section>
-        <section id="posts">
-            <h2 class="section-title">مقالات قد تهمك</h2>
-            <div class="posts-grid" id="postsGrid">
-                <article class="post">
-                    <a href="../posts/كيف-تزيد-إنتاجيتك-بخطوات-بسيطة.html">
-                        <div class="thumb"><img src="../assets/img/1751444658009.png" onerror="this.src='https://placehold.co/300x160/0a84ff/ffffff?text=Productivity'" alt="صورة توضيحية لزيادة الإنتاجية" loading="lazy"></div>
-                        <div class="meta">
-                            <div class="cat">تطوير الذات</div>
-                            <h3>كيف تزيد إنتاجيتك بخطوات بسيطة</h3>
-                            <p>دليل شامل لزيادة الإنتاجية والتركيز عبر استراتيجيات عملية وعلمية.</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="post">
-                    <a href="../posts/م-ز.html">
-                        <div class="thumb"><img src="../assets/img/images (1).jpeg" onerror="this.src='https://placehold.co/300x160/2c3e50/ffffff?text=Blogging'" alt="صورة أدوات التدوين" loading="lazy"></div>
-                        <div class="meta">
-                            <div class="cat">تقنية</div>
-                            <h3>أفضل الأدوات للتدوين في 2025</h3>
-                            <p>دليل شامل لأحدث الأدوات التي يحتاجها المدونون لرفع إنتاجيتهم.</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="post">
-                    <a href="../posts/ق-س.html">
-                        <div class="thumb"><img src="../assets/img/sS6Uo9WdMBLtSo8zgkgpZYH4f7QfEpFqZa9cOSQT.jpg" onerror="this.src='https://placehold.co/300x160/3498db/ffffff?text=Free+Resources'" alt="مواقع كتب وألعاب مجانية" loading="lazy"></div>
-                        <div class="meta">
-                            <div class="cat">ترفيه</div>
-                            <h3>أفضل مواقع الكتب، الألعاب، والأفلام المجانية</h3>
-                            <p>اكتشف أفضل المصادر المجانية للقصص، الألعاب، والأفلام عبر الإنترنت.</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="post">
-                    <a href="../posts/س-ف-ر.html">
-                        <div class="thumb"><img src="../assets/img/images (3).jpeg" onerror="this.src='https://placehold.co/300x160/3498db/ffffff?text=Travel'" alt="صورة تخطيط السفر" loading="lazy"></div>
-                        <div class="meta">
-                            <div class="cat">سفر</div>
-                            <h3>كيف تخطط لرحلة اقتصادية</h3>
-                            <p>نصائح عملية وحيل ذكية لتنظيم رحلة ممتعة بأقل التكاليف.</p>
-                        </div>
-                    </a>
-                </article>
-
-
-
-                <article class="post">
-                    <a href="../posts/م-ط.html">
-                        <div class="thumb"><img src="../assets/img/طبخ .webp" onerror="this.src='https://placehold.co/300x160/e67e22/ffffff?text=Cooking+Mastery'" alt="صورة الطبخ" loading="lazy"></div>
-                        <div class="meta">
-                            <div class="cat">طبخ</div>
-                            <h3>دليل المبتدئين لإتقان فن الطبخ المنزلي</h3>
-                            <p>تعلم أهم 5 خطوات لتحويل تجربة الطبخ في المنزل من روتينية إلى إبداع ممتع.</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-    </main>
-    
-    <footer style="text-align: center; padding: 25px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.05);">
-        <p>&copy; 2025 مدونتي. أفكار تستحق القراءة.</p>
-    </footer>
-
-    <script>
-        // Theme persistence and toggle (كما كانت في الهيكل الأصلي)
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-        themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
-
-        themeToggle.addEventListener('click', () => {
-            const isLight = body.getAttribute('data-theme') === 'light';
-            const newTheme = isLight ? 'dark' : 'light';
-            body.setAttribute('data-theme', newTheme);
-            themeToggle.textContent = isLight ? '☀️' : '🌙';
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Menu button toggle (كما كانت في الهيكل الأصلي)
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.querySelector('.nav-links');
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-            menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('show'));
-        });
-
-        // --- وظيفة الآلة الحاسبة لإدارة المال (بدلاً من وصفات الطبخ) ---
-        const budgetForm = document.getElementById('budgetForm');
-        const monthlyIncomeInput = document.getElementById('monthlyIncome');
-        const existingSavingsInput = document.getElementById('existingSavings');
-        const budgetOutputDiv = document.getElementById('budget-output');
-        const emergencyGoal = 6; // هدف الطوارئ: 6 أشهر
-
-        budgetForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const income = parseFloat(monthlyIncomeInput.value);
-            const savings = parseFloat(existingSavingsInput.value) || 0;
-            budgetOutputDiv.innerHTML = `<div class="loading-spinner"></div>`;
-
-            // محاكاة تأخير بسيط لـ "التحميل"
-            setTimeout(() => {
-                if (isNaN(income) || income <= 0) {
-                    budgetOutputDiv.innerHTML = `<p style="color:red; text-align:center;">الرجاء إدخال قيمة دخل شهرية صحيحة.</p>`;
-                    return;
-                }
-
-                // حساب تقسيم 50/30/20
-                const needs = income * 0.50;  // 50% للاحتياجات
-                const wants = income * 0.30;  // 30% للكماليات
-                const savingAndDebt = income * 0.20; // 20% للادخار وسداد الديون
-
-                // حساب هدف الطوارئ
-                const totalEmergencyNeeded = income * emergencyGoal;
-                const remainingToGoal = Math.max(0, totalEmergencyNeeded - savings);
-
-                let html = `
-                    <div class="budget-result-section">
-                        <h3>توزيع ميزانيتك المقترح (قاعدة 50/30/20)</h3>
-                        <div class="result-item"><span>**50% - الاحتياجات الأساسية (Needs)**</span> <span>${needs.toFixed(2)}</span></div>
-                        <div class="result-item"><span>**30% - الكماليات والرغبات (Wants)**</span> <span>${wants.toFixed(2)}</span></div>
-                        <div class="result-item" style="border-bottom: none;"><span>**20% - الادخار وسداد الديون (Saving/Debt)**</span> <span>${savingAndDebt.toFixed(2)}</span></div>
-                    </div>
-
-                    <div class="budget-result-section">
-                        <h3>📊 وضع صندوق الطوارئ</h3>
-                        <div class="result-item"><span>**الهدف (6 أشهر من الدخل)**</span> <span>${totalEmergencyNeeded.toFixed(2)}</span></div>
-                        <div class="result-item"><span>**مدخراتك الحالية للطوارئ**</span> <span>${savings.toFixed(2)}</span></div>
-                        <div class="result-item" style="border-bottom: none; font-weight: bold; color: ${remainingToGoal > 0 ? 'var(--accent)' : 'green'};">
-                            <span>**المتبقي للوصول للهدف**</span> 
-                            <span>${remainingToGoal.toFixed(2)}</span>
-                        </div>
-                    </div>
-                `;
-                
-                if (remainingToGoal === 0) {
-                     html += `<p style="text-align:center; color:green; font-weight: bold;">أحسنت! لقد وصلت إلى هدف صندوق الطوارئ.</p>`;
-                } else if (remainingToGoal > 0) {
-                     html += `<p style="text-align:center; color:var(--accent);">ركّز جزءًا من نسبة الـ 20% على إكمال صندوق الطوارئ أولاً!</p>`;
-                }
-
-
-                budgetOutputDiv.innerHTML = html;
-            }, 500); // تأخير نصف ثانية للمحاكاة
-        });
-
-        // Fix for placeholder image (كما كانت في الهيكل الأصلي)
-        document.querySelectorAll('img[onerror]').forEach(img => {
-            img.addEventListener('error', function() {
-                this.style.filter = 'grayscale(100%)';
-            });
-        });
-    </script>
-</body>
-</html>
