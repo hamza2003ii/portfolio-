@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>دليل المبتدئين لعالم الترفيه: الكتب، القصص، والألعاب | مدونتي</title>
+    <meta name="description" content="استكشف أفضل المصادر والأنواع في عالم الكتب والألعاب والقصص لتمضية وقت ممتع ومفيد." />
+    
+    <meta property="og:title" content="دليل المبتدئين لعالم الترفيه: الكتب، القصص، والألعاب">
+    <meta property="og:image" content="../assets/img/صورة-الترفيه.jpg">
+    <link rel="manifest" href="../manifest.json">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "دليل المبتدئين لعالم الترفيه: الكتب، القصص، والألعاب",
+        "author": { "@type": "Person", "name": "أحمد الترفيهي" },
+        "image": { "@type": "ImageObject", "url": "https://yourblog.com/assets/img/صورة-الترفيه.jpg" }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --card: #f7f7f8;
+            --muted: #6b7280;
+            --accent: #0a84ff;
+            --text: #0b1220;
+            --glass: rgba(255,255,255,0.6);
+            --radius: 14px;
+            --shadow: 0 6px 24px rgba(11,18,32,0.08);
+            --content-width: 720px;
+            --pad: 28px;
+            scroll-behavior: smooth;
+        }
+        [data-theme="dark"] {
+            --bg: #0b0c0f;
+            --card: #0f1216;
+            --muted: #9aa3b2;
+            --accent: #3ea6ff;
+            --text: #e6eef8;
+            --glass: rgba(10,10,12,0.4);
+            --shadow: 0 8px 30px rgba(2,6,12,0.6);
+        }
+
+        /* الأساسيات */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7; 
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { text-decoration: underline; }
+        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+        .container { max-width: 1200px; margin: auto; padding: 0 var(--pad); }
+        
+        /* Header & Nav */
+        header { 
+            position: sticky; top: 0; z-index: 100; 
+            background: var(--glass); backdrop-filter: blur(8px); 
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        [data-theme="dark"] header { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav { display: flex; align-items: center; padding: 12px 0; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo .badge { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow); overflow: hidden; }
+        .logo .text div:first-child { font-weight: 700; }
+        .logo .text div:last-child { font-size: 12px; color: var(--muted); }
+        .nav-links { display: flex; gap: 20px; align-items: center; margin-inline-start: auto; }
+        .nav-links a { padding: 8px 10px; border-radius: 10px; font-weight: 600; color: var(--muted); }
+        .nav-links a:hover { background: var(--accent); color: white; }
+        .nav-actions { display: flex; gap: 10px; align-items: center; }
+        .icon-btn { background: var(--card); border: none; padding: 8px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
+        .icon-btn:hover { background: var(--accent); color: white; }
+        
+        /* 1. هيكل المقالة */
+        .article-wrapper {
+            max-width: 1000px; 
+            margin: 0 auto;
+            padding-bottom: 60px;
+        }
+
+        /* 2. تنسيق العنوان (H1) */
+        .article-header {
+            text-align: center;
+            padding: 60px 0 20px; 
+            z-index: 1;
+        }
+        .article-header h1 {
+            font-size: 2.7rem; 
+            font-weight: 800; 
+            line-height: 1.25;
+            margin-bottom: 15px;
+            max-width: 750px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* شريط الميتا (مبسط) */
+        .article-meta-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--card); 
+            max-width: var(--content-width);
+            margin: 0 auto 40px auto;
+        }
+        .article-meta-bar span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .article-meta-bar a {
+            color: var(--muted);
+            transition: color 0.3s ease;
+        }
+        .article-meta-bar a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .article-meta-bar .separator {
+            color: var(--muted);
+            font-size: 1.2em;
+            opacity: 0.5;
+        }
+
+        /* الصورة الرئيسية */
+        .article-thumb {
+            width: 50%; 
+            max-width: 900px;
+            height: auto;
+            max-height: 450px; 
+            margin: 0 auto 60px; 
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        /* 3. تنسيق جسم المقالة (نص القراءة) */
+        .article-body {
+            max-width: var(--content-width); 
+            margin: 0 auto;
+            padding: 0 var(--pad);
+            font-size: 1.05rem; 
+        }
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 45px;
+            margin-bottom: 15px;
+            color: var(--text);
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--card); 
+        }
+        .article-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .article-body p {
+            margin-bottom: 25px;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 30px;
+            padding-right: 25px;
+        }
+        .article-body blockquote {
+            border-right: 4px solid var(--accent);
+            padding: 20px 25px;
+            margin: 40px 0;
+            background: var(--card);
+            border-radius: var(--radius);
+            font-style: italic;
+            font-size: 1em;
+            color: var(--text);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* قسم المنصات المجانية (الجديد) */
+        .free-platforms-section {
+            padding: 50px 0; 
+            max-width: 900px; 
+            margin: 40px auto; 
+            background: var(--card); 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow); 
+            text-align: center;
+        }
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 var(--pad);
+            text-align: right;
+        }
+        .platform-card {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: var(--radius);
+            border-right: 3px solid var(--accent);
+            text-align: right;
+        }
+        .platform-card h3 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .platform-card ul {
+            padding-right: 20px;
+            margin-bottom: 0;
+        }
+        .platform-card li {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+        
+        /* 4. تنسيق المقالات ذات الصلة (محتوى ذات صلة) */
+        .related-posts {
+            padding: 50px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h2.section-title { 
+            font-size: 22px; 
+            margin-bottom: 30px; 
+            text-align: center;
+            font-weight: 700;
+            padding-bottom: 10px;
+            color: var(--text);
+        }
+        .posts-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px;
+            padding: 0 var(--pad);
+        }
+        .post { 
+            background: var(--card); 
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .post a { display: block; }
+        .post:hover { transform: translateY(-5px); }
+        .post .thumb { height: 160px; overflow: hidden; }
+        .post .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .post .meta { padding: 16px; }
+        .post .meta .cat { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+        .post .meta h3 { margin: 0 0 8px; font-size: 1.05rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root { --pad: 16px; }
+            .article-header {
+                padding: 40px 0 20px;
+            }
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            .article-meta-bar {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .article-meta-bar .separator {
+                display: none;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+            .article-thumb {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            /* تحسين إظهار قائمة التنقل في الموبايل */
+            .nav {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                display: none; /* إخفاء الروابط في وضع الموبايل */
+                width: 100%;
+                order: 3; /* وضعها في الأسفل */
+                flex-direction: column;
+                padding: 15px 0 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Calculator Styles */
+        #fun-suggestions-tool {
+            max-width: var(--content-width); 
+            margin: 60px auto 40px auto;
+            padding: var(--pad);
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        #fun-suggestions-tool h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        #suggestionForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        #suggestionForm label {
+            font-weight: 600;
+            color: var(--text);
+            display: block;
+            margin-bottom: 5px;
+        }
+        #suggestionForm select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        [data-theme="dark"] #suggestionForm select {
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        #suggestionForm select:focus {
+            border-color: var(--accent);
+        }
+        #suggestionForm button {
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        #suggestionForm button:hover:not(:disabled) {
+            background: #007aff;
+        }
+        #suggestion-output {
+            text-align: right;
+            padding-top: 20px;
+            border-top: 1px dashed var(--muted);
+            margin-top: 20px;
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dotted var(--card);
+        }
+        .loading-spinner {
+            border: 4px solid var(--card);
+            border-top: 4px solid var(--accent);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+    <header>
+        <div class="nav container">
+            <a href="../index.html" class="logo">
+                <div class="badge">
+                    <img src="../assets/img/logo.jpg" onerror="this.src='https://placehold.co/40x40/0a84ff/ffffff?text=L'" alt="شعار مدونتي">
+                </div>
+                <div class="text">
+                    <div>مدونتي</div>
+                    <div>أفكار تستحق القراءة</div>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="روابط الموقع">
+                <a href="../index.html#home">الرئيسية</a>
+                <a href="../index.html#posts">المقالات</a>
+                <a href="../index.html#about">من نحن</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" title="تبديل الوضع" aria-label="تبديل بين الوضع الفاتح والداكن">🌙</button>
+                <button class="icon-btn" id="menuBtn" aria-label="قائمة التنقل" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="article-wrapper">
+        <article>
+            <header class="article-header">
+                <h1>دليل المبتدئين لعالم الترفيه: الكتب، القصص، والألعاب</h1>
+                
+                <div class="article-meta-bar">
+                    <span>الكاتب: <a href="#">أحمد الترفيهي</a></span>
+                    <span class="separator">|</span>
+                    <span>تاريخ النشر: <time datetime="2025-11-01">1 نوفمبر 2025</time></span>
+                    <span class="separator">|</span>
+                    <span>التصنيف: <a href="../index.html#categories">ترفيه</a></span>
+                </div>
+            </header>
+            
+            <div class="article-thumb">
+                <img src="../assets/img/16.jpg.webp" onerror="this.src='https://placehold.co/900x450/3498db/ffffff?text=Entertainment+World'" alt="صورة توضيحية للترفيه والألعاب والكتب">
+            </div>
+
+            <div class="article-body">
+                <p><strong>مقدمة المقالة:</strong> الترفيه ليس مجرد مضيعة للوقت، بل هو جزء أساسي من الصحة النفسية والعقلية. سواء كنت تبحث عن الهدوء في صفحات كتاب، أو الإثارة في عالم الألعاب، أو الاستلهام في القصص المسموعة، فإن تنظيم وقتك الترفيهي بذكاء يضاعف من فوائده. سنتعرف هنا على 4 محاور رئيسية لاستكشاف عالم الترفيه بفعالية.</p>
+
+                <h2>1. الغوص في عوالم الكتب: من الورق إلى الشاشة</h2>
+                <p>القراءة هي نافذتك للتعلم والاستمتاع. لا تقتصر الكتب على الأدب الكلاسيكي، بل تشمل الروايات الخيالية، أدب الخيال العلمي، وكتب تطوير الذات. ابحث عن الأسلوب الذي يناسبك، سواء كان **الكتاب المطبوع** أو **الكتب الصوتية (Audiobooks)** أو **الكتب الرقمية (E-books)**.</p>
+                
+                <h3>كيف تختار كتابك القادم:</h3>
+                <ul>
+                    <li><p><strong>استكشف التصنيفات:</strong> جرب قراءة فصول قليلة من تصنيفات لم تجربها من قبل (مثل الخيال التاريخي أو السيرة الذاتية). قد تكتشف شغفاً جديداً.</p></li>
+                    <li><p><strong>المنصات الرقمية:</strong> استخدم تطبيقات ومنصات مثل **Goodreads** لمعرفة تقييمات القراء، و **Project Gutenberg** للكتب المجانية القديمة.</p></li>
+                    <li><p><strong>خصص وقتاً:</strong> اجعل القراءة عادة يومية، حتى لو كانت لمدة 15 دقيقة فقط قبل النوم.</p></li>
+                </ul>
+                
+                <blockquote>
+                    "الكتاب الجيد هو صديق لا يخون، ومرآة تعكس أفكارك وتوسع مداركك دون أن تتنقل من مكانك."
+                </blockquote>
+                
+                <h2>2. الألعاب: ترفيه تفاعلي ينمي المهارات 🎮</h2>
+                <p>الألعاب الحديثة تجاوزت كونها مجرد تسلية؛ فهي تتطلب حل المشكلات، والعمل الجماعي، وتطوير المهارات الحركية. سواء كنت تفضل ألعاب الهاتف المحمول السريعة، أو ألعاب الكونسول (PS5/Xbox) ذات القصص المعقدة، أو ألعاب الكمبيوتر التنافسية، فإنها توفر هروباً صحياً من الروتين.</p>
+                
+                <h3>أنواع الألعاب وفوائدها:</h3>
+                <ol>
+                    <li><p><strong>الألعاب الاستراتيجية (Strategy Games):</strong> تعزز التفكير النقدي والتخطيط طويل المدى، مثل ألعاب بناء المدن أو الجيوش.</p></li>
+                    <li><p><strong>ألعاب الألغاز (Puzzle Games):</strong> تحسن الذاكرة والتركيز والقدرة على حل المشكلات بشكل سريع.</p></li>
+                    <li><p><strong>الألعاب الجماعية (Multiplayer Games):</strong> تساهم في تطوير مهارات التواصل والعمل ضمن فريق (خصوصاً للأطفال والمراهقين).</p></li>
+                </ol>
+
+                <h2>3. قوة القصص والروايات المسموعة والمرئية</h2>
+                <p>في عصرنا الحالي، أصبح بإمكانك الاستمتاع بالقصص دون الحاجة إلى القراءة. **القصص المسموعة** (مثل البودكاست) والروايات على **YouTube** تتيح لك استهلاك المحتوى أثناء القيام بمهام أخرى. ابحث عن القصص التي تلامس شغفك وتجعلك تندمج في عوالمها.</p>
+
+                <h3>ابحث عن الإلهام:</h3>
+                <ul>
+                    <li><p><strong>المدونات الصوتية (Podcasts):</strong> اختر بودكاست يروي قصصاً واقعية أو تاريخية أو خيالية. هناك تنوع لا نهائي من المحتوى المجاني.</p></li>
+                    <li><p><strong>الوثائقيات والأفلام القصيرة:</strong> استغل منصات الفيديو لمشاهدة محتوى تثقيفي وترفيهي عالي الجودة يقدم قصصاً مؤثرة من حول العالم.</p></li>
+                </ul>
+                
+                <p>لتنويع وقتك الترفيهي، استخدم الأداة المقترحة أدناه لترى اقتراحاً فورياً لنشاط ترفيهي بناءً على حالتك المزاجية!</p>
+                
+            </div>
+            </article>
+        
+        <hr style="margin: 60px auto; max-width: 900px; border-color: var(--card);">
+
+        <section class="free-platforms-section">
+            <h2 class="section-title">مصادر ترفيهية مجانية وموثوقة</h2>
+            <p style="color:var(--muted); margin-bottom: 30px; padding: 0 var(--pad);">استكشف أفضل المواقع القانونية للاستمتاع بالكتب والأفلام والألعاب دون تكلفة.</p>
+            
+            <div class="platforms-grid">
+                
+                <div class="platform-card">
+                    <h3>📚 الكتب والروايات المجانية</h3>
+                    <ul>
+                        <li><a href="https://www.gutenberg.org" target="_blank">**Project Gutenberg**</a>: آلاف الكتب الكلاسيكية والقديمة بالإنجليزية (مجال عام).</li>
+                        <li><a href="https://manybooks.net" target="_blank">**ManyBooks**</a>: مجموعة كبيرة من الكتب المجانية في تصنيفات متنوعة.</li>
+                        <li><a href="https://www.abjjad.com/books" target="_blank">**أبجد**</a>: منصة لقراءة الكتب الإلكترونية والروايات العربية (تتوفر أعمال مجانية).</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <h3>🎮 الألعاب المجانية (Free-to-Play)</h3>
+                    <ul>
+                        <li><a href="https://store.epicgames.com/ar/free-games" target="_blank">**Epic Games Store**</a>: يقدم ألعاباً مجانية بشكل أسبوعي، بالإضافة لـ Free-to-Play دائمة.</li>
+                        <li><a href="https://ar.crazygames.com/" target="_blank">**CrazyGames**</a>: ألعاب متصفح بسيطة ومجانية لا تحتاج تنزيل.</li>
+                        <li><a href="https://play.google.com/googleplaygames" target="_blank">**ألعاب Google Play**</a>: مجموعة ضخمة من ألعاب الموبايل والكمبيوتر المجانية (F2P).</li>
+                    </ul>
+                </div>
+
+                <div class="platform-card">
+                    <h3>🎬 الأفلام والمسلسلات المجانية</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/" target="_blank">**YouTube**</a>: العديد من القنوات تعرض أفلامًا كاملة وقانونية (Public Domain).</li>
+                        <li><a href="https://www.crackle.com" target="_blank">**Crackle**</a>: أفلام ومسلسلات مجانية عالية الجودة (مع إعلانات).</li>
+                        <li><a href="https://www.popcornflix.com" target="_blank">**Popcornflix**</a>: مكتبة متنوعة من الأفلام والعروض المجانية.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+        <hr style="margin: 60px auto; max-width: 900px; border-color: var(--card);">
+
+        
+        <section id="fun-suggestions-tool">
+            <h2>🎉 اقتراح نشاط ترفيهي فوري</h2>
+            <p style="color:var(--muted); margin-bottom: 20px;">دعنا نقترح عليك أفضل ما يناسب مزاجك الحالي.</p>
+            
+            <form id="suggestionForm">
+                <div>
+                    <label for="moodSelector">ما هو مزاجك الآن؟</label>
+                    <select id="moodSelector" required aria-label="اختر حالتك المزاجية">
+                        <option value="">-- اختر الحالة --</option>
+                        <option value="focus">أحتاج التركيز والتحدي</option>
+                        <option value="relax">أريد الاسترخاء والهدوء</option>
+                        <option value="adventure">أبحث عن الإثارة والمغامرة</option>
+                        <option value="learn">أرغب في التعلم والمعرفة</option>
+                    </select>
+                </div>
+                <button type="submit" id="getSuggestionBtn">اقترح لي نشاطاً</button>
+            </form>
+            
+            <div id="suggestion-output">
+                </div>
+        </section>
+        
+        <section id="posts">
+            <h2 class="section-title">مقالات ذات صلة</h2>
+            <div class="posts-grid" id="postsGrid">
+                
+                <article class="post">
+                    <a href="../posts/كيف-تزيد-إنتاجيتك-بخطوات-بسيطة.html">
+                        <div class="thumb"><img src="../assets/img/1751444658009.png" onerror="this.src='https://placehold.co/300x160/0a84ff/ffffff?text=Productivity'" alt="صورة توضيحية لزيادة الإنتاجية" loading="lazy"></div>
+                        <div class="meta">
+                            <div class="cat">تطوير الذات</div>
+                            <h3>كيف تزيد إنتاجيتك بخطوات بسيطة</h3>
+                            <p>دليل شامل لزيادة الإنتاجية والتركيز عبر استراتيجيات عملية وعلمية.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post">
+                    <a href="../posts/م-ز.html">
+                        <div class="thumb"><img src="../assets/img/images (1).jpeg" onerror="this.src='https://placehold.co/300x160/2c3e50/ffffff?text=Blogging'" alt="صورة أدوات التدوين" loading="lazy"></div>
+                        <div class="meta">
+                            <div class="cat">تقنية</div>
+                            <h3>أفضل الأدوات للتدوين في 2025</h3>
+                            <p>دليل شامل لأحدث الأدوات التي يحتاجها المدونون لرفع إنتاجيتهم.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post">
+                    <a href="../posts/س-ف-ر.html">
+                        <div class="thumb"><img src="../assets/img/images (3).jpeg" onerror="this.src='https://placehold.co/300x160/3498db/ffffff?text=Travel'" alt="صورة تخطيط السفر" loading="lazy"></div>
+                        <div class="meta">
+                            <div class="cat">سفر</div>
+                            <h3>كيف تخطط لرحلة اقتصادية</h3>
+                            <p>نصائح عملية وحيل ذكية لتنظيم رحلة ممتعة بأقل التكاليف.</p>
+                        </div>
+                    </a>
+                </article>
+
+
+                <article class="post">
+                    <a href="../posts/م-ل.html">
+                        <div class="thumb"><img src="../assets/img/images%20%282%29.jpeg" onerror="this.src='https://placehold.co/300x160/2c3e50/ffffff?text=Finance'" alt="صورة إدارة المال" loading="lazy"></div>
+                        <div class="meta">
+                            <div class="cat">مالية</div>
+                            <h3>أساسيات إدارة المال الشخصي</h3>
+                            <p>قواعد بسيطة لتبدأ رحلة الادخار والاستثمار.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="post">
+                    <a href="../posts/م-ط.html">
+                        <div class="thumb"><img src="../assets/img/طبخ .webp" onerror="this.src='https://placehold.co/300x160/e67e22/ffffff?text=Cooking+Mastery'" alt="صورة الطبخ" loading="lazy"></div>
+                        <div class="meta">
+                            <div class="cat">طبخ</div>
+                            <h3>دليل المبتدئين لإتقان فن الطبخ المنزلي</h3>
+                            <p>تعلم أهم 5 خطوات لتحويل تجربة الطبخ في المنزل من روتينية إلى إبداع ممتع.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <footer style="text-align: center; padding: 25px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.05);">
+        <p>&copy; 2025 مدونتي. أفكار تستحق القراءة.</p>
+    </footer>
+
+    <script>
+        // Theme persistence and toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme') || 'dark'; // الوضع الداكن افتراضياً
+        body.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+        themeToggle.addEventListener('click', () => {
+            const isLight = body.getAttribute('data-theme') === 'light';
+            const newTheme = isLight ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            themeToggle.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Menu button toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('show'));
+        });
+
+        // --- وظيفة أداة الاقتراحات الترفيهية ---
+        const suggestionForm = document.getElementById('suggestionForm');
+        const moodSelector = document.getElementById('moodSelector');
+        const suggestionOutputDiv = document.getElementById('suggestion-output');
+
+        const suggestions = {
+            focus: [
+                { title: "لعبة ألغاز معقدة 🧩", details: "ابحث عن لعبة 'سودوكو' متقدمة أو لعبة 'Puzzles' على هاتفك. تتطلب تركيزاً عميقاً." },
+                { title: "كتاب خيال علمي أو جريمة 📚", details: "اختر كتاباً ذا حبكة معقدة أو أدب خيال علمي (مثل رواية آيزاك أسيموف) لشد انتباهك." },
+                { title: "تجميع نموذج أو مكعبات بناء 🏗️", details: "نشاط يدوي يتطلب دقة وتركيزاً عالياً، ومناسب جداً لتصفية الذهن." }
+            ],
+            relax: [
+                { title: "استماع لبودكاست قصصي هادئ 🎧", details: "ابحث عن 'Podcast' مريح أو كتاب صوتي في تصنيف الأدب الرومانسي أو التاريخي الهادئ." },
+                { title: "لعبة إيقاع أو محاكاة بسيطة 🏡", details: "مثل 'Animal Crossing' أو ألعاب الزراعة والمحاكاة التي لا تحتاج لجهد كبير." },
+                { title: "قراءة شعر أو مقالات قصيرة ☕", details: "تصفح ديوان شعر أو مقالات مريحة ذات نصوص قصيرة لتجنب الإجهاد." }
+            ],
+            adventure: [
+                { title: "لعبة مغامرات (RPG) أو عالم مفتوح 🗺️", details: "ابدأ لعبة تستكشف فيها عالماً كبيراً ومليئاً بالمهام الجانبية (مثل 'The Witcher')." },
+                { title: "رواية فانتازيا ملحمية 🐉", details: "اقرأ سلسلة روايات ذات عوالم كبيرة وشخصيات متعددة لخوض مغامرة خيالية (مثل 'Game of Thrones')." },
+                { title: "مشاهدة وثائقيات استكشافية 🏔️", details: "شاهد وثائقيات عن السفر، استكشاف الطبيعة، أو الحياة البرية." }
+            ],
+            learn: [
+                { title: "كتاب غير خيالي لتطوير الذات 🧠", details: "اختر كتاباً في مجال يثير فضولك: التسويق، التاريخ، أو الفيزياء المبسطة." },
+                { title: "لعبة تعليمية أو تدريب دماغي 🧪", details: "استخدم تطبيقات تدريب الدماغ (مثل Lumosity) أو ألعاب تعلم اللغات." },
+                { title: "مشاهدة TED Talk أو محتوى تثقيفي 💡", details: "شاهد محاضرة ملهمة أو فيديو قصير يشرح مفهوماً علمياً جديداً." }
+            ]
+        };
+
+        suggestionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const mood = moodSelector.value;
+            suggestionOutputDiv.innerHTML = `<div class="loading-spinner"></div>`;
+
+            setTimeout(() => {
+                if (!mood) {
+                    suggestionOutputDiv.innerHTML = `<p style="color:red; text-align:center;">الرجاء اختيار حالة مزاجية أولاً.</p>`;
+                    return;
+                }
+
+                const moodSuggestions = suggestions[mood];
+                let html = `<h3>نصيحتنا لك بناءً على حالتك المزاجية:</h3>`;
+
+                moodSuggestions.forEach(item => {
+                    html += `
+                        <div class="result-item" style="display: block; text-align: right; padding: 12px 0;">
+                            <span style="font-weight: bold; color: var(--text);">${item.title}</span> 
+                            <p style="color: var(--muted); margin: 5px 0 0 0; font-size: 0.95rem;">${item.details}</p>
+                        </div>
+                    `;
+                });
+                
+                suggestionOutputDiv.innerHTML = html;
+            }, 500); // تأخير نصف ثانية للمحاكاة
+        });
+
+        // Fix for placeholder image
+        document.querySelectorAll('img[onerror]').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.filter = 'grayscale(100%)';
+            });
+        });
+    </script>
+</body>
+</html>
